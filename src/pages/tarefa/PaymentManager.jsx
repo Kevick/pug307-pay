@@ -26,7 +26,7 @@ const sendWhatsAppMessage = (date, amount) => {
   const formattedAmount = formatCurrency(amount);
   const formattedDate = new Date(date).toLocaleDateString("pt-BR");
   
-  const message = `Nova transferência realizada!%0AData: ${formattedDate}%0AValor: ${formattedAmount} \n Acesse o sistema com seu login e verifique o histórico completo de transação!`;
+  const message = `Nova transferência realizada!%0AData: ${formattedDate}%0AValor: ${formattedAmount} \n Acesse o sistema com seu login e verifique o histórico completo de transação! https://pug307-f22c32c21ecd.herokuapp.com/`;
   
   // Cria o link do WhatsApp e abre em nova janela
   const whatsappUrl = `https://wa.me/${RECIPIENT_PHONE}?text=${message}`;
