@@ -58,11 +58,18 @@ const PaymentManager = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "admin") {
+  
+    // Usando as variáveis de ambiente
+    const adminUsername = process.env.REACT_APP_ADMIN_USERNAME;
+    const adminPassword = process.env.REACT_APP_ADMIN_PASSWORD;
+    const viewerUsername = process.env.REACT_APP_VIEWER_USERNAME;
+    const viewerPassword = process.env.REACT_APP_VIEWER_PASSWORD;
+  
+    if (username === adminUsername && password === adminPassword) {
       setCurrentUser({ role: "admin" });
       setIsLoggedIn(true);
       setError("");
-    } else if (username === "viewer" && password === "viewer") {
+    } else if (username === viewerUsername && password === viewerPassword) {
       setCurrentUser({ role: "viewer" });
       setIsLoggedIn(true);
       setError("");
