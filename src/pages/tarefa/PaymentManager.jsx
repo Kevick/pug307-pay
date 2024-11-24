@@ -13,7 +13,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
 const TOTAL_DUE = 25000;
-const RECIPIENT_PHONE = '553175029572'; // Substitua pelo número do seu primo (apenas números)
+const RECIPIENT_PHONE = process.env.REACT_APP_RECIPIENT_PHONE;
 
 const formatCurrency = (value) => {
   return new Intl.NumberFormat("pt-BR", {
